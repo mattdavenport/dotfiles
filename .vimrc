@@ -7,33 +7,30 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-" VIM Utility
+" vimutil
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'fholgado/minibufexpl.vim'
 
-" Themes
+" themes
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
 
-" Code Utility
+" codeutil
+Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'airblade/vim-gitgutter'
 Bundle 'fatih/vim-go'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'lervag/vimtex'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'majutsushi/tagbar'
 Bundle 'stanangeloff/php.vim'
-Bundle 'modess/vim-phpcolors'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
