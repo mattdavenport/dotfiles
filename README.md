@@ -1,5 +1,7 @@
 # dotfiles
 Dotfile repo for Linux dev boxes
+Adapted from various sources:
+  - ThoughtBot (thoughtbot/dotfiles)
 
 ### Contents
 1. .vimrc (VIM)
@@ -27,3 +29,5 @@ Dotfile repo for Linux dev boxes
         * Jellybeans
         * Vim-Monokai
 2. .zshrc (Zshell)
+3. .gemrc ('gem' config)
+4. .rspec (rspec config)

@@ -1,0 +1,5 @@
+[user]
+  email = matt@mattdavenport.io
+  name = Matt Davenport
+[core]
+  autocrlf = false
