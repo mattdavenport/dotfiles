@@ -1,7 +1,5 @@
 # dotfiles
 Dotfile repo for Linux dev boxes
-Adapted from various sources:
-  - ThoughtBot (thoughtbot/dotfiles)
 
 ### Contents
 1. .vimrc (VIM)
@@ -31,3 +29,12 @@ Adapted from various sources:
 2. .zshrc (Zshell)
 3. .gemrc ('gem' config)
 4. .rspec (rspec config)
+5. .gitconfig (git config)
+
+### Installation
+`git clone https://github.com/mattdavenport/dotfiles $HOME/.dotfiles&&bash
+$HOME/.dotfiles/bootstrap.sh`
+
+### Credits
+- This project uses [Homemaker](https://www.github.com/foosoft/homemaker) for
+dotfile management

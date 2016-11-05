@@ -42,7 +42,6 @@ chsh -s /bin/zsh
 # Install oh-my-zsh
 print_info "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-source $USER_HOME/.zshrc
 
 # Set oh-my-zsh theme
 THEME_LIST=$(ls ~/.oh-my-zsh/themes | sed 's/\(.*\)\..*/\1/')
@@ -76,11 +75,9 @@ if [ ! -d $USER_HOME/.go ]; then
 fi
 apt-get install golang-stable
 
-# Install dotfiles
-print_info "Installing fresh shell..."
-ln -s $SCRIPT_DIR/.freshrc /home/$CURRENT_USER/.freshrc
+# Install homemaker
+go get github.com/mattdavenport/homemaker
 
-bash -c "`curl -sL https://get.freshshell.com`"
 
 # Install vim
 if ! type "vim" > /dev/null; then
@@ -88,5 +85,5 @@ if ! type "vim" > /dev/null; then
   apt-get install vim
 fi
 
-# Install vim package
+# Install vim packages
 vim +PluginInstall +qall

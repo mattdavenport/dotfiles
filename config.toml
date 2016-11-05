@@ -1,0 +1,57 @@
+#
+#   macros
+#
+[macros.install]
+  prefix = ["sudo", "apt-get", "install", "-y"]
+
+######################################
+
+#
+#   util
+#
+
+[tasks.git]
+  cmds = [["@install", "git"]]
+  links = [[".gitconfig", "config/git/gitconfig"]]
+
+[tasks.vim]
+  deps = ["vimrc"]
+  cmds = [["@install", "vim"]]
+
+[tasks.vimrc]
+  rejects = [["test", "-f", "$HM_DEST/.vimrc"]]
+  links = [[".vimrc", "$HM_DEST/config/vim/vimrc"],]
+
+[tasks.zsh]
+  deps = ["zshrc"]
+  rejects = [["which", "zsh"]]
+  cmds = [["@install", "zsh"], ["chsh", "-s", "/usr/bin/zsh"]]
+
+[tasks.zshrc]
+  rejects = [["test", "-f", "$HM_DEST/.zshrc"]]
+  links = [[".zshrc", "config/zsh/zshrc"]]
+
+[tasks.curl]
+  rejects [["which", "curl"]]
+  cmds = [["@install", "curl"]]
+
+[tasks.ohmyzsh]
+  deps = ["zsh", "curl"]
+  cmds = [
+    ["sh",
+     "-c",
+     "\"$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\""
+  ]
+
+[tasks.rspec]
+  rejects = [["test", "-f", "$HM_DEST/.rspec"]]
+  links = [[".rspec", "config/rspec/rspec"]]
+
+######################################
+
+#
+#   exec
+#
+
+[tasks.general]
+  deps = ["git", "vim", "ohmyzsh", "rspec"]
