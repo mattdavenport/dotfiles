@@ -85,7 +85,9 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l='ls --color=tty'
+alias k='kontena'
 
+# NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -96,3 +98,7 @@ export NVM_DIR="/home/kossae/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Kontena settings
+export SSL_IGNORE_ERRORS=true
+which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
