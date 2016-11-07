@@ -32,6 +32,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'stanangeloff/php.vim'
 Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
+Bundle 'posva/vim-vue'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
