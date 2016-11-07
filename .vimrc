@@ -23,7 +23,6 @@ Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'fatih/vim-go'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'lervag/vimtex'
 Bundle 'mxw/vim-jsx'
@@ -69,9 +68,6 @@ set cindent                 " syntax-aware auto indent
 set smarttab                " <BS> deletes a shiftwidth worth of space
 set softtabstop=4           " number of spaces pressing <Tab> counts for
 set tabstop=4               " number of spaces a <Tab> in the file counts for
-
-" Smaller indents on css and html files
-autocmd! Syntax css,html,htmldjango,js setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 set showmatch               " briefly jump to matching bracket
 set ignorecase              " ignore case when pattern matching
@@ -139,20 +135,4 @@ let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 
 " Closetag settings
 let g:closetag_html_style=1
-autocmd! FileType html,htmldjango source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
-
-" Highlight characters when lines get too long
-autocmd! BufWinEnter *.py,*.vim,vimrc match ErrorMsg '\%>79v.\+'
-autocmd! BufWinEnter *.html match ErrorMsg '\%>100v.\+'
-
-" Automatically wrap text while typing in Markdown and rST documents
-autocmd! BufNewFile,BufReadPost *.md set filetype=markdown
-autocmd! Filetype markdown,rst set textwidth=79
-
-" Remove trailing whitespace and empty lines at end of file
-augroup whitespace
-    autocmd!
-    autocmd BufWritePre * :%s/\s\+$//e
-    autocmd BufWritePre * :%s/\($\n\s*\)\+\%$//e
-augroup END
 set bs=2
