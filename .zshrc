@@ -85,6 +85,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l='ls --color=tty'
+alias sl='ls --color=tty'
 alias k='kontena'
 
 # NVM settings
