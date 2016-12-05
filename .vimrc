@@ -137,3 +137,14 @@ let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 " Closetag settings
 let g:closetag_html_style=1
 set bs=2
+
+" HARD MODE
+" " disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
