@@ -49,7 +49,7 @@ ZSH_THEME="$(cat $HOME/.zsh_theme)"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rvm heroku rails rake ruby)
+plugins=(git rvm heroku rails rake ruby docker)
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -87,6 +87,7 @@ export EDITOR='vim'
 alias l='ls --color=tty'
 alias sl='ls --color=tty'
 alias k='kontena'
+alias vi='vim'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
