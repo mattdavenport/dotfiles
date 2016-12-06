@@ -49,7 +49,7 @@ ZSH_THEME="$(cat $HOME/.zsh_theme)"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rvm heroku rails rake ruby docker)
+plugins=(git rvm heroku rails rake ruby vagrant docker)
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -88,6 +88,7 @@ alias l='ls --color=tty'
 alias sl='ls --color=tty'
 alias k='kontena'
 alias vi='vim'
+alias knssh='kontena node ssh -u root'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
