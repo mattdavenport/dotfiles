@@ -2,6 +2,7 @@
 Dotfile repo for Linux dev boxes
 Adapted from various sources:
   - ThoughtBot (thoughtbot/dotfiles)
+  - spicycode  (https://gist.github.com/spicycode/1229612)
 
 ### Contents
 1. .vimrc (VIM)
@@ -31,3 +32,4 @@ Adapted from various sources:
 2. .zshrc (Zshell)
 3. .gemrc ('gem' config)
 4. .rspec (rspec config)
+5. .tmux  (tmux config & folder)

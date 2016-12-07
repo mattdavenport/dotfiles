@@ -1,0 +1,9 @@
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule ".oh-my-zsh/themes/oh-my-zsh-node-theme"]
+	path = .oh-my-zsh/themes/oh-my-zsh-node-theme
+	url = git@github.com:skuridin/oh-my-zsh-node-theme.git
+[submodule ".oh-my-zsh/plugins/zsh-syntax-highlighting"]
+	path = .oh-my-zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
