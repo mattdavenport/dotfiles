@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="$(cat $HOME/.zsh_theme)"
 
 # oh-my-zsh Plugins
-plugins=(git rvm heroku rails rake ruby vagrant docker)
+plugins=(git rvm heroku rails rake ruby vagrant docker zsh-syntax-highlighting)
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
@@ -70,6 +70,7 @@ fi
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nsps='netstat -plunt | sort'
 
+# start Kontena vpn
 function kontena-vpn-start {
 	set -e
 	local pidfile=/var/run/kontena-openvpn.pid
@@ -88,9 +89,15 @@ function kontena-vpn-start {
     (sleep 5; rm $tmpfile; rm -f /tmp/openvpn.*)&
 }
 
+# send file to rtb
 function readthenburn {
 	[ -n "$1" ] || { echo "Usage: pass filename to upload file or use - to read stdin"; return 1; }
 	[ "$1" = '-' ] && { secret='<-'; action=write; } || { secret="@$1"; action=upload; }
     url=$(curl -s -XPOST -F "secret=$secret" https://secure.bss-llc.com/readthenburn?action=$action)
     if [ $? -eq 0 -a $action = "write" ]; then echo "$url/raw"; else echo $url; fi
+}
+
+# start tunnelbear vpn
+function tunnelbear {
+  echo "TODO";
 }
