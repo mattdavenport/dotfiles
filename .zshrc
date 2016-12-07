@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="$(cat $HOME/.zsh_theme)"
 
 # oh-my-zsh Plugins
-plugins=(git rvm heroku rails rake ruby vagrant docker zsh-syntax-highlighting)
+plugins=(git rvm heroku rails rake ruby vagrant docker docker-compose zsh-syntax-highlighting)
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
