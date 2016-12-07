@@ -32,4 +32,4 @@ Adapted from various sources:
 2. .zshrc (Zshell)
 3. .gemrc ('gem' config)
 4. .rspec (rspec config)
-5. .tmux  (tmux config)
+5. .tmux  (tmux config & folder)
