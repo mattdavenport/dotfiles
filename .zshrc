@@ -21,6 +21,7 @@ export EDITOR='vim'
 alias l='ls'
 alias ll='ls -al'
 alias sl='ls'
+alias grep='grep --color -nH'
 alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
@@ -97,7 +98,5 @@ function readthenburn {
     if [ $? -eq 0 -a $action = "write" ]; then echo "$url/raw"; else echo $url; fi
 }
 
-# start tunnelbear vpn
-function tunnelbear {
-  echo "TODO";
-}
+# source .profile for machine-specific settings
+source ~/.profile
