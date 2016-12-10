@@ -46,7 +46,8 @@ syntax on                   " turn on syntax highlighting
 colorscheme monokai         " syntax highlighting colours
 
 set autoread                " auto reload buffer when file modified externally
-set clipboard=unnamed       " yank and paste using system clipboard
+" clipboard setting causes errors on OSX
+"set clipboard=unnamed       " yank and paste using system clipboard
 set encoding=utf-8          " default character encoding
 set hidden                  " do not unload buffers that get hidden
 set noswapfile              " do not use a swap file for buffers
