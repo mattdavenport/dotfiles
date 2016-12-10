@@ -25,6 +25,7 @@ alias grep='grep --color -nH'
 alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
+alias howdoi='howdoi -ac'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
