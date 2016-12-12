@@ -18,6 +18,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
 
 " codeutil
+Bundle 'leafgarland/typescript-vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
@@ -33,6 +34,7 @@ Bundle 'stanangeloff/php.vim'
 Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
+Bundle 'tpope/vim-rails'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
