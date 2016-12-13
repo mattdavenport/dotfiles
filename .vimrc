@@ -35,6 +35,7 @@ Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
+Bundle 'vimwiki/vimwiki'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))

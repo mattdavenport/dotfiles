@@ -4,6 +4,7 @@
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2016.3.1.0.0</property>
     <property name="modified">2016-12-13T13:40:43</property>
+    <property name="modified">2016-12-09T16:24:48</property>
     <property name="originalScheme">Monokai-Sublime</property>
   </metaInfo>
   <option name="EDITOR_FONT_SIZE" value="14" />
@@ -23,7 +24,7 @@
     <option name="LINE_NUMBERS_COLOR" value="6e6b68" />
     <option name="RIGHT_MARGIN_COLOR" value="333333" />
     <option name="SELECTED_TEARLINE_COLOR" value="c0c0c0" />
-    <option name="SELECTION_BACKGROUND" value="2c3028" />
+    <option name="SELECTION_BACKGROUND" value="818a72" />
     <option name="SELECTION_FOREGROUND" value="" />
     <option name="SOFT_WRAP_SIGN_COLOR" value="736f5c" />
     <option name="TEARLINE_COLOR" value="c0c0c0" />
@@ -209,6 +210,12 @@
     <option name="CUSTOM_STRING_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="ffffff" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="DEFAULT_ENTITY">
+      <value>
+        <option name="FOREGROUND" value="66d9ef" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
