@@ -18,6 +18,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
 
 " codeutil
+Bundle 'leafgarland/typescript-vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
@@ -33,6 +34,8 @@ Bundle 'stanangeloff/php.vim'
 Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
+Bundle 'tpope/vim-rails'
+Bundle 'vimwiki/vimwiki'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
@@ -46,7 +49,8 @@ syntax on                   " turn on syntax highlighting
 colorscheme monokai         " syntax highlighting colours
 
 set autoread                " auto reload buffer when file modified externally
-set clipboard=unnamed       " yank and paste using system clipboard
+" clipboard setting causes errors on OSX
+"set clipboard=unnamed       " yank and paste using system clipboard
 set encoding=utf-8          " default character encoding
 set hidden                  " do not unload buffers that get hidden
 set noswapfile              " do not use a swap file for buffers
