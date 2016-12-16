@@ -75,6 +75,7 @@ if [ -f ~/.ssh/.auto-agent ]; then
     if [ -z "$SSH_AUTH_SOCK" ]; then
       eval $(ssh-agent)
       echo "Starting new ssh-agent"
+      ssh-add
     fi
   fi
 fi
