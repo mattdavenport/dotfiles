@@ -33,7 +33,7 @@ export EDITOR='vim'
 alias l='ls'
 alias ll='ls -al'
 alias sl='ls'
-alias grep='grep -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
@@ -76,6 +76,7 @@ if [ -f ~/.ssh/.auto-agent ]; then
     if [ -z "$SSH_AUTH_SOCK" ]; then
       eval $(ssh-agent)
       echo "Starting new ssh-agent"
+      ssh-add
     fi
   fi
 fi
