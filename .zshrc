@@ -29,6 +29,9 @@ export LANG=en_US.UTF-8
 
 export EDITOR='vim'
 
+# Options
+setopt nonomatch    # fix weird globbing output
+
 # Command Aliases
 alias l='ls'
 alias ll='ls -al'
@@ -63,7 +66,7 @@ if [ -f ~/.ssh/.auto-agent ]; then
     eval $(/usr/bin/ssh-pageant -ra $TEMP/.ssh-pageant)
     echo "Using PuTTY's Pageant"
   # Use Linux ssh-agent
-  elif [ -f /usr/bin/ssh-agent ] && [ -z "$SSH_AUTH_SOCK" ]; then
+  elif [ -f /usr/bin/ssh-agent ] && [ "$SSH_AUTH_SOCK" ]; then
     for agent in /tmp/ssh-*/agent.*; do
       export SSH_AUTH_SOCK=$agent
       if ssh-add -l 2>&1 > /dev/null; then
