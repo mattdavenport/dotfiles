@@ -3,8 +3,7 @@
     <property name="created">2016-12-09T09:53:29</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2016.3.1.0.0</property>
-    <property name="modified">2016-12-13T13:40:43</property>
-    <property name="modified">2016-12-09T16:24:48</property>
+    <property name="modified">2017-01-04T16:16:52</property>
     <property name="originalScheme">Monokai-Sublime</property>
   </metaInfo>
   <option name="EDITOR_FONT_SIZE" value="14" />
@@ -75,6 +74,12 @@
         <option name="FOREGROUND" value="ffffff" />
         <option name="BACKGROUND" value="272822" />
         <option name="EFFECT_COLOR" value="aaaaaa" />
+      </value>
+    </option>
+    <option name="BREAKPOINT_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="861324" />
+        <option name="ERROR_STRIPE_COLOR" value="ffc8c8" />
       </value>
     </option>
     <option name="CLASS_NAME_ATTRIBUTES">
@@ -233,6 +238,12 @@
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
         <option name="FOREGROUND" value="66d9ef" />
+      </value>
+    </option>
+    <option name="DEFAULT_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="66d9ef" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
