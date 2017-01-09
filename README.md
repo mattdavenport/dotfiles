@@ -3,6 +3,7 @@ Dotfile repo for Linux dev boxes
 Adapted from various sources:
   - ThoughtBot (thoughtbot/dotfiles)
   - spicycode  (https://gist.github.com/spicycode/1229612)
+  - al-the-x   (al-the-x/homebrew-mine)
 
 ### Contents
 1. .vimrc (VIM)
