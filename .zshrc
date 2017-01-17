@@ -17,6 +17,8 @@ plugins=(
           docker-compose 
           zsh-syntax-highlighting 
           tmux
+          nvm
+          npm
 )
 
 # User configuration
@@ -29,11 +31,14 @@ export LANG=en_US.UTF-8
 
 export EDITOR='vim'
 
+# Options
+setopt nonomatch    # fix weird globbing output
+
 # Command Aliases
 alias l='ls'
 alias ll='ls -al'
 alias sl='ls'
-alias grep='grep --color -nH'
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
@@ -42,7 +47,7 @@ alias knssh='kontena node ssh -u root'
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-export NVM_DIR="/home/kossae/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # GoLang vars
@@ -62,7 +67,7 @@ if [ -f ~/.ssh/.auto-agent ]; then
     eval $(/usr/bin/ssh-pageant -ra $TEMP/.ssh-pageant)
     echo "Using PuTTY's Pageant"
   # Use Linux ssh-agent
-  elif [ -f /usr/bin/ssh-agent ] && [ -z "$SSH_AUTH_SOCK" ]; then
+  elif [ -f /usr/bin/ssh-agent ] && [ "$SSH_AUTH_SOCK" ]; then
     for agent in /tmp/ssh-*/agent.*; do
       export SSH_AUTH_SOCK=$agent
       if ssh-add -l 2>&1 > /dev/null; then

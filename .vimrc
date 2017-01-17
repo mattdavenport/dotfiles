@@ -13,6 +13,11 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'Lokaltog/vim-easymotion'
 
+Bundle 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
+
 " themes
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
@@ -22,7 +27,10 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
+
 Bundle 'scrooloose/nerdtree'
+nmap <leader>ne :NERDTree<cr>
+
 Bundle 'airblade/vim-gitgutter'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'lervag/vimtex'

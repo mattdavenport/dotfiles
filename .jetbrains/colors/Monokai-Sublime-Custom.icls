@@ -3,12 +3,13 @@
     <property name="created">2016-12-09T09:53:29</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2016.3.1.0.0</property>
-    <property name="modified">2016-12-13T13:40:43</property>
-    <property name="modified">2016-12-09T16:24:48</property>
+    <property name="modified">2017-01-11T11:30:36</property>
     <property name="originalScheme">Monokai-Sublime</property>
   </metaInfo>
-  <option name="EDITOR_FONT_SIZE" value="14" />
-  <option name="EDITOR_FONT_NAME" value="Ubuntu Mono" />
+  <option name="EDITOR_FONT_SIZE" value="12" />
+  <option name="CONSOLE_FONT_NAME" value="Menlo" />
+  <option name="CONSOLE_FONT_SIZE" value="14" />
+  <option name="EDITOR_FONT_NAME" value="Menlo" />
   <colors>
     <option name="CARET_COLOR" value="f8f8f0" />
     <option name="CARET_ROW_COLOR" value="3b3c32" />
@@ -75,6 +76,12 @@
         <option name="FOREGROUND" value="ffffff" />
         <option name="BACKGROUND" value="272822" />
         <option name="EFFECT_COLOR" value="aaaaaa" />
+      </value>
+    </option>
+    <option name="BREAKPOINT_ATTRIBUTES">
+      <value>
+        <option name="BACKGROUND" value="861324" />
+        <option name="ERROR_STRIPE_COLOR" value="ffc8c8" />
       </value>
     </option>
     <option name="CLASS_NAME_ATTRIBUTES">
@@ -227,12 +234,17 @@
     <option name="DEFAULT_INSTANCE_FIELD">
       <value>
         <option name="FOREGROUND" value="a6e22e" />
-        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_INSTANCE_METHOD">
       <value>
         <option name="FOREGROUND" value="66d9ef" />
+      </value>
+    </option>
+    <option name="DEFAULT_KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="66d9ef" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
@@ -244,6 +256,11 @@
       <value>
         <option name="FOREGROUND" value="dae22b" />
         <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_VALID_STRING_ESCAPE">
+      <value>
+        <option name="FOREGROUND" value="66d9ef" />
       </value>
     </option>
     <option name="DIFF_CONFLICT">
@@ -759,7 +776,7 @@
     </option>
     <option name="PHP_FUNCTION">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="66d9ef" />
       </value>
     </option>
     <option name="PHP_IDENTIFIER">
