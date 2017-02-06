@@ -36,7 +36,7 @@ setopt nonomatch    # fix weird globbing output
 
 # Command Aliases
 alias l='ls'
-alias ll='ls -al'
+alias ll='ls -alh'
 alias sl='ls'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
@@ -59,6 +59,9 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # Kontena settings
 export SSL_IGNORE_ERRORS=true
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
+
+# Docker settings
+[[ -f "$HOME/.config/docker-gc-exclude" ]] && export EXCLUDE_FROM_GC="$HOME/.config/docker-gc-exclude"
 
 # SSH
 # Automatically setup ssh agent if flag file exists
