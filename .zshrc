@@ -18,6 +18,7 @@ plugins=(
           zsh-syntax-highlighting 
           tmux
           nvm
+          pip
           npm
 )
 
