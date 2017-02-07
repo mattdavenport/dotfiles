@@ -96,5 +96,12 @@ done
 # Install vim package
 vim +PluginInstall +qall
 
+# TODO - Configure vim-youcompleteme
+# TODO*** Install nodejs and `npm install -g typescript`
+#sudo apt-get install -y build-essential cmake python-dev python3-dev
+#cd $HOME/.vim/bundle/YouCompleteMe && ./install.py \
+  #--clang-completer \
+  #--tern-completer
+
 # Source tmux
 tmux source $USER_HOME/.tmux.conf

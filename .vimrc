@@ -28,6 +28,8 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'othree/html5.vim'
 
+Bundle 'valloric/youcompleteme'
+
 Bundle 'scrooloose/nerdtree'
 nmap <leader>ne :NERDTree<cr>
 
