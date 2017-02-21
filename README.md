@@ -38,4 +38,4 @@ Adapted from various sources:
 ### Notes
 * When using OSX, it is recommended that `coreutils` is installed. Once installed,
   the user will need to add `PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"`
-  to the .profile file in order to map the GNU utils properly
+  to the .profile file in order to map the GNU utils properly. WARNING: THIS MAY BREAK THINGS!!
