@@ -43,6 +43,7 @@ alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
+alias ssh-keygen='ssh-keygen -b 4096'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
