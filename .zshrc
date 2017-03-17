@@ -44,6 +44,7 @@ alias k='kontena'
 alias vi='vim'
 alias knssh='kontena node ssh -u root'
 alias ssh-keygen='ssh-keygen -b 4096'
+alias hs='head *'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
