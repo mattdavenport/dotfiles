@@ -21,6 +21,8 @@ let g:ctrlp_cmd = 'CtrlP'
 " themes
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
+Bundle 'zacanger/angr.vim'
+Bundle 'dunckr/vim-monokai-soda'
 
 " codeutil
 Bundle 'leafgarland/typescript-vim'
