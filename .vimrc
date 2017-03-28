@@ -130,6 +130,11 @@ map <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>r :edit ~/.vim/vimrc<CR>
 nnoremap <Leader>R :source ~/.vim/vimrc<CR>:source ~/.vim/vimrc<CR>
 
+" VIM-like tab navigation
+nnoremap th :tabprev<CR>
+nnoremap tl :tabnext<CR>
+nnoremap tn :tabnew<CR>
+
 set guioptions=
 set guifont=Menlo:h14
 
