@@ -20,6 +20,7 @@ plugins=(
           nvm
           pip
           npm
+          gulp
 )
 
 # User configuration
