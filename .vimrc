@@ -16,7 +16,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
+let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 
 " themes
 Bundle 'nanotech/jellybeans.vim'
@@ -46,6 +46,7 @@ Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
 Bundle 'vimwiki/vimwiki'
+Bundle 'ekalinin/Dockerfile.vim'
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
