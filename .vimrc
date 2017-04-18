@@ -23,7 +23,6 @@ let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
 Bundle 'zacanger/angr.vim'
-Bundle 'dunckr/vim-monokai-soda'
 
 " codeutil
 Bundle 'leafgarland/typescript-vim'
@@ -166,6 +165,8 @@ let g:airline_symbols.paste = '∥'
 let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline_skip_empty_sections = 1
 
 " Closetag settings
 let g:closetag_html_style=1
