@@ -110,6 +110,7 @@ EOL
 
 # TODO - Configure vim-youcompleteme
 # TODO*** Install nodejs and `npm install -g typescript`
+# TODO Setup PGP keys (keybase.io) and git signed commits
 #sudo apt-get install -y build-essential cmake python-dev python3-dev
 #cd $HOME/.vim/bundle/youcompleteme && ./install.py \
   #--clang-completer \
