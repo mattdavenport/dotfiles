@@ -96,6 +96,18 @@ done
 # Install vim package
 vim +PluginInstall +qall
 
+# Set SSH multiplexing
+# ref: http://frankenbyte.tumblr.com/post/33747851865/faster-github-using-ssh-multiplexing
+SSH_DIR="$USER_HOME/.ssh"
+[ -f "$SSH_DIR/config" ] || touch "$SSH_DIR/config" && mkdir "$SSH_DIR/connections"
+cat > "$SSH_DIR/config" << EOL
+Host *
+  TCPKeepAlive yes
+  ServerAliveInterval 60
+  ControlMaster auto
+  ControlPath ~/.ssh/connections/%r_%h_%p
+EOL
+
 # TODO - Configure vim-youcompleteme
 # TODO*** Install nodejs and `npm install -g typescript`
 #sudo apt-get install -y build-essential cmake python-dev python3-dev
