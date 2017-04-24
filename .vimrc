@@ -13,7 +13,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Lokaltog/vim-easymotion'
-
 Bundle 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -46,6 +45,12 @@ Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'elzr/vim-json'
+
+" Markdown stuff
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))
