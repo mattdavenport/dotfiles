@@ -45,7 +45,6 @@ Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
-Bundle 'vimwiki/vimwiki'
 Bundle 'ekalinin/Dockerfile.vim'
 
 " Automatically install bundles on first run
