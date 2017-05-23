@@ -46,11 +46,13 @@ Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
 Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'elzr/vim-json'
+let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
 " Markdown stuff
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_new_list_item_indent = 2
 
 " Automatically install bundles on first run
 if !isdirectory(expand("~/.vim/bundle/vim-airline"))

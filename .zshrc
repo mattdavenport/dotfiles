@@ -95,7 +95,6 @@ fi
 # Helper functions/aliases
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nsps='netstat -plunt | sort'
-alias cleandocks="docker rmi $(docker images | grep none | awk '{print $3}')"
 
 # start Kontena vpn
 function kontena-vpn-start {

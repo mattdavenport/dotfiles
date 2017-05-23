@@ -1,0 +1,30 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.wordWrap": "on",
+    "editor.tabSize": 2,
+    "search.exclude": {
+        "**/.git": true,
+        "**/devs/volumes-ammo": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.jpg": true,
+        "**/.png": true,
+        "**/.JPEG": true,
+        "**/.jpeg": true,
+        "**/.DS_Store": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'SF Mono Regular', Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "window.zoomLevel": 0,
+    "material-icon-theme.showUpdateMessage": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Monokai Dark Soda",
+    "files.insertFinalNewline": true,
+    "workbench.statusBar.visible": true,
+    "eslint.enable": true,
+    "workbench.activityBar.visible": true
+}

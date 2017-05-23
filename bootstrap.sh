@@ -108,6 +108,7 @@ Host *
   ControlPath ~/.ssh/connections/%r_%h_%p
 EOL
 
+# TODO - run `brew install reattach-to-user-namespace` if OSX for tmux conf
 # TODO - Configure vim-youcompleteme
 # TODO*** Install nodejs and `npm install -g typescript`
 # TODO Setup PGP keys (keybase.io) and git signed commits
