@@ -95,6 +95,7 @@ fi
 # Helper functions/aliases
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nsps='netstat -plunt | sort'
+alias git-stats='git shortlog -sn'
 
 # start Kontena vpn
 function kontena-vpn-start {
