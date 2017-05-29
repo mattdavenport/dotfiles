@@ -26,5 +26,6 @@
     "files.insertFinalNewline": true,
     "workbench.statusBar.visible": true,
     "eslint.enable": true,
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "vim.disableAnnoyingNeovimMessage": true
 }
