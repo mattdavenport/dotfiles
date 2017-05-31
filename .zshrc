@@ -20,6 +20,7 @@ plugins=(
           nvm
           pip
           npm
+          node
           gulp
 )
 
