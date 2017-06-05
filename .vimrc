@@ -22,6 +22,7 @@ let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'sickill/vim-monokai'
 Bundle 'zacanger/angr.vim'
+Bundle 'dracula/vim'
 
 " codeutil
 Bundle 'leafgarland/typescript-vim'
@@ -63,7 +64,7 @@ endif
 
 filetype plugin indent on   " detect file type and load indents and plugins
 syntax on                   " turn on syntax highlighting
-colorscheme monokai         " syntax highlighting colours
+color dracula         " syntax highlighting colours
 
 set autoread                " auto reload buffer when file modified externally
 " clipboard setting causes errors on OSX
