@@ -2,3 +2,7 @@
 --ignore-directory=is:bower_components
 --type-set=sass:ext:scss,sass
 --type-set=markdown:ext:md,markdown
+--color
+--color-match=red on_bright_green
+--color-filename=red
+--color-lineno=magenta
