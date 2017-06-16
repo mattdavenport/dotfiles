@@ -18,6 +18,7 @@
     },
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'SF Mono Regular', Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
+    "editor.minimap.enabled": false,
     "editor.fontSize": 12,
     "window.zoomLevel": 0,
     "material-icon-theme.showUpdateMessage": false,
