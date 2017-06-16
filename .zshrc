@@ -99,6 +99,11 @@ alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nsps='netstat -plunt | sort'
 alias git-stats='git shortlog -sn'
 
+# check open port on macOS
+function check-port {
+  [[ -n $1 ]] && lsof -n -i4TCP:$1 | grep LISTEN || echo "Port $1 is available for use!"
+}
+
 # start Kontena vpn
 function kontena-vpn-start {
 	set -e
