@@ -48,6 +48,9 @@ alias knssh='kontena node ssh -u root'
 alias ssh-keygen='ssh-keygen -b 4096'
 alias hs='head *'
 alias tree='tree -C'
+alias setup_docker_network='ifconfig lo0 alias 10.254.254.254'
+alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
+alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
