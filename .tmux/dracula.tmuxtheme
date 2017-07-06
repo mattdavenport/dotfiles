@@ -29,7 +29,7 @@ set -g status-right "#[fg=colour231,bg=colour59]#[fg=colour231,bg=colour59] %H:%
 
 # Window status
 set -g window-status-format "  #I:#W#F  "
-set -g window-status-current-format "#[fg=colour233,bg=colour141]>>#[fg=colour233,bg=colour141,nobold] #I:#W#F #[fg=colour233,bg=colour141,nobold]<<"
+set -g window-status-current-format "#[fg=colour233,bg=colour141]»#[fg=colour233,bg=colour141,nobold] #I:#W#F #[fg=colour233,bg=colour141,nobold]«"
 
 # Current window status
 set -g window-status-current-bg colour39
