@@ -134,5 +134,18 @@ function readthenburn {
     if [ $? -eq 0 -a $action = "write" ]; then echo "$url/raw"; else echo $url; fi
 }
 
+# override ssh function to add tmux window naming
+# todo: Does not work well with multiple panes
+hash tmux 2>/dev/null && {
+ssh() {
+    if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm=)" = "tmux" ]; then
+        tmux rename-window "$(echo $* | rev | cut -d ' ' -f1 | rev | cut -d . -f 1)"
+        command ssh "$@"
+        tmux set-window-option automatic-rename "on" 1>/dev/null
+    else
+        command ssh "$@"
+    fi
+}}
+
 # source .profile for machine-specific settings
 source ~/.profile
