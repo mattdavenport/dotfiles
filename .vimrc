@@ -46,6 +46,8 @@ Bundle 'moll/vim-node'
 Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
 Bundle 'ekalinin/Dockerfile.vim'
+Bundle 'prettier/vim-prettier'
+
 Bundle 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
