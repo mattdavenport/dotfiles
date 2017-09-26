@@ -28,5 +28,11 @@
     "workbench.statusBar.visible": true,
     "eslint.enable": true,
     "workbench.activityBar.visible": false,
-    "vim.disableAnnoyingNeovimMessage": true
+    "vim.disableAnnoyingNeovimMessage": true,
+    "emmet.triggerExpansionOnTab": false,
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.excludeLanguages": [
+        "markdown",
+        "javascriptreact"
+    ]
 }
