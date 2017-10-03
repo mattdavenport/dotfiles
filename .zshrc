@@ -72,28 +72,13 @@ which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
 [[ -f "$HOME/.config/docker-gc-exclude" ]] && export EXCLUDE_FROM_GC="$HOME/.config/docker-gc-exclude"
 
 # SSH
-# Automatically setup ssh agent if flag file exists
-if [ -f ~/.ssh/.auto-agent ]; then
-  # Allow cygwin to use PuTTY's pageant
-  if [ -f /usr/bin/ssh-pageant ]; then
-    eval $(/usr/bin/ssh-pageant -ra $TEMP/.ssh-pageant)
-    echo "Using PuTTY's Pageant"
-  # Use Linux ssh-agent
-  elif [ -f /usr/bin/ssh-agent ] && [ "$SSH_AUTH_SOCK" ]; then
-    for agent in /tmp/ssh-*/agent.*; do
-      export SSH_AUTH_SOCK=$agent
-      if ssh-add -l 2>&1 > /dev/null; then
-        echo "Using already running ssh-agent"
-        break
-      else
-        unset SSH_AUTH_SOCK
-      fi
-    done
-    if [ -z "$SSH_AUTH_SOCK" ]; then
-      eval $(ssh-agent)
-      echo "Starting new ssh-agent"
-      ssh-add
-    fi
+if [[ -f ~/.ssh/.auto-agent ]]; then
+  . ~/.dotfiles/ssh-find-agent.sh
+  ssh-find-agent -a
+  if [ -z "$SSH_AUTH_SOCK" ]
+  then
+     eval $(ssh-agent) > /dev/null
+     ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
   fi
 fi
 
