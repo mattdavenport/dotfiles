@@ -51,6 +51,7 @@ alias tree='tree -C'
 alias setup_docker_network='ifconfig lo0 alias 10.254.254.254'
 alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
+alias mysqlmonitor="$HOME/.dotfiles/utils/mysql_monitor.sh"
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
@@ -63,6 +64,9 @@ export NVM_DIR="$HOME/.nvm"
 export GOPATH=$HOME/.go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# OSX
+export PATH=$PATH:/opt/local/bin
 
 # Kontena settings
 export SSL_IGNORE_ERRORS=true
