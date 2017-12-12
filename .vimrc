@@ -14,6 +14,8 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'xolox/vim-notes'
+Bundle 'xolox/vim-misc'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
