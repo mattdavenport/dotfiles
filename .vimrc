@@ -4,6 +4,7 @@ if !isdirectory(expand("~/.vim/bundle/vundle"))
 endif
 set nocompatible
 filetype off
+filetype plugin on
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
@@ -19,6 +20,10 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 
 Bundle 'vimwiki/vimwiki'
+let g:vimwiki_list = [{'path': '~/Dropbox/Wiki/', 'syntax': 'markdown', 'ext': '.md', 'index': 'index'}]
+let g:vimwiki_dir_link = 'index'
+
+Bundle 'mattn/calendar-vim'
 
 " themes
 Bundle 'nanotech/jellybeans.vim'
