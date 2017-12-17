@@ -6,6 +6,7 @@ set nocompatible
 filetype off
 filetype plugin on
 set rtp+=~/.vim/bundle/vundle
+set omnifunc=syntaxcomplete#Complete
 call vundle#rc()
 
 " vimutil
