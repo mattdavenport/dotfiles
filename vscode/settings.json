@@ -45,5 +45,18 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": false
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "ruby.lint": {
+        "reek": true,
+        "rubocop": {
+            "lint": true,
+            "rails": true
+        },
+        "ruby": true,
+        "fasterer": true,
+        "debride": {
+            "lint": true,
+            "rails": true
+        }
+    },
 }
