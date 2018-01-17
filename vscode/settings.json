@@ -48,7 +48,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "ruby.locate": {
         "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
-        "include": "**/*.rb"
+        "include": "**/*.rb, "
     },
     "ruby.lint": {
         "reek": true,
