@@ -21,7 +21,12 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 
 Bundle 'vimwiki/vimwiki'
-let g:vimwiki_list = [{'path': '~/Dropbox/Wiki/', 'syntax': 'markdown', 'ext': '.md', 'index': 'index'}]
+let g:vimwiki_list = [{
+      \ 'path': '~/Dropbox/Wiki/', 
+      \ 'path_html': '~/Dropbox/Wiki/html',
+      \ 'syntax': 'markdown',
+      \ 'ext': '.md',
+      \ 'index': 'index' }]
 let g:vimwiki_dir_link = 'index'
 
 Bundle 'mattn/calendar-vim'
