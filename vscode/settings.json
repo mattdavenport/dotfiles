@@ -16,6 +16,9 @@
         "**/.jpeg": true,
         "**/.DS_Store": true
     },
+    "workbench.colorCustomizations": {
+        "terminal.background": "#2d303f"
+    },
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "'SFMono-Regular', Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
     "editor.minimap.enabled": false,
