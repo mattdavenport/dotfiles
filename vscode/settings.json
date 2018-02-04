@@ -63,4 +63,5 @@
             "rails": true
         }
     },
+    "extensions.ignoreRecommendations": false,
 }
