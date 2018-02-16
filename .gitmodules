@@ -7,3 +7,6 @@
 [submodule ".oh-my-zsh/plugins/zsh-syntax-highlighting"]
 	path = .oh-my-zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".oh-my-zsh/themes/zsh"]
+	path = .oh-my-zsh/themes/zsh
+	url = https://github.com/dracula/zsh.git
