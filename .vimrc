@@ -119,6 +119,13 @@ set hlsearch                " keep previous search highlighted
 " Turn off highlighting of previous search
 noremap <C-n> :nohlsearch<CR>
 
+" Allow shift+TAB backwards tab behavior
+" 1) For command mode
+" 2) For insert mode
+" nnoremap <S-Tab> <<
+inoremap <S-Tab> <C-d>
+
+
 let mapleader = ","
 let g:mapleader = ","
 let g:user_emmet_leader_key = '<C-e>'
