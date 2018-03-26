@@ -27,6 +27,7 @@ let g:vimwiki_list = [{
       \ 'syntax': 'markdown',
       \ 'ext': '.md',
       \ 'index': 'index' }]
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'markdown'}
 let g:vimwiki_dir_link = 'index'
 
 Bundle 'mattn/calendar-vim'

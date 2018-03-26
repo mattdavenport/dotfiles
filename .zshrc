@@ -8,6 +8,7 @@ ZSH_THEME="$(cat $HOME/.zsh_theme)"
 plugins=(
           git
           rvm 
+          bundler
           heroku 
           rails 
           rake 
@@ -22,6 +23,10 @@ plugins=(
           npm
           node
           gulp
+          python
+          pyenv
+          virtualenv
+          django
 )
 
 # User configuration
@@ -32,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Options
 setopt nonomatch    # fix weird globbing output
@@ -43,7 +48,6 @@ alias ll='ls -alh'
 alias sl='ls'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
-alias vi='vim -p'
 alias knssh='kontena node ssh -u root'
 alias ssh-keygen='ssh-keygen -b 4096'
 alias hs='head *'
@@ -52,6 +56,11 @@ alias setup_docker_network='ifconfig lo0 alias 10.254.254.254'
 alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
 alias mysqlmonitor="$HOME/.dotfiles/utils/mysql_monitor.sh"
+alias vi='nvim -p'
+alias vim='nvim -p'
+
+# reenable venv prompt
+export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # NVM settings
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
