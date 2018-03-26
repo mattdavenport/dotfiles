@@ -53,6 +53,20 @@ Bundle 'lervag/vimtex'
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-syntastic/syntastic'
+Bundle 'neomake/neomake'
+" Run NeoMake on read and write operations
+" ref: https://robots.thoughtbot.com/my-life-with-neovim
+autocmd! BufReadPost,BufWritePost * Neomake
+
+" Disable inherited syntastic
+let g:syntastic_mode_map = {
+  \ "mode": "passive",
+  \ "active_filetypes": [],
+  \ "passive_filetypes": [] }
+
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
+
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'stanangeloff/php.vim'
 Bundle 'kylef/apiblueprint.vim'
