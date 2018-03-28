@@ -37,7 +37,6 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-export EDITOR='nvim'
 
 # Options
 setopt nonomatch    # fix weird globbing output
@@ -56,8 +55,16 @@ alias setup_docker_network='ifconfig lo0 alias 10.254.254.254'
 alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
 alias mysqlmonitor="$HOME/.dotfiles/utils/mysql_monitor.sh"
-alias vi='nvim -p'
-alias vim='nvim -p'
+
+# Set editor
+if type "nvim" > /dev/null; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
+
+alias vi="$EDITOR -p"
+alias vim="$EDITOR -p"
 
 # reenable venv prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
@@ -134,3 +141,5 @@ function readthenburn {
 
 # source .profile for machine-specific settings
 source ~/.profile
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
