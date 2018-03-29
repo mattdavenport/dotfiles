@@ -67,4 +67,5 @@
         }
     },
     "extensions.ignoreRecommendations": false,
+    "gitlens.keymap": "alternate",
 }

@@ -27,6 +27,7 @@ plugins=(
           pyenv
           virtualenv
           django
+          go
 )
 
 # User configuration
