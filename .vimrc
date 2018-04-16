@@ -82,6 +82,9 @@ Bundle 'chr4/sslsecure.vim'
 Bundle 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
+" Set dosini syntax highlighting for conf files
+autocmd! BufRead,BufNewFile *.conf setf dosini
+
 " Markdown stuff
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
