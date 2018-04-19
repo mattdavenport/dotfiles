@@ -43,9 +43,10 @@ export LANG=en_US.UTF-8
 setopt nonomatch    # fix weird globbing output
 
 # Command Aliases
-alias l='ls'
-alias ll='ls -alh'
-alias sl='ls'
+alias l='ls -h --color'
+alias ls='ls -h --color'
+alias ll='ls -lh --color'
+alias sl='ls -h --color'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias knssh='kontena node ssh -u root'
