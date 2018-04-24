@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # zsh autosuggestion
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 bindkey '^ ' autosuggest-execute
 
 # You may need to manually set your language environment
