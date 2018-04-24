@@ -17,6 +17,7 @@ plugins=(
           docker 
           docker-compose 
           zsh-syntax-highlighting 
+          zsh-autosuggestions
           tmux
           nvm
           pip
@@ -35,9 +36,12 @@ export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh autosuggestion
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+bindkey '^ ' autosuggest-execute
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-
 
 # Options
 setopt nonomatch    # fix weird globbing output
