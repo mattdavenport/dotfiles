@@ -32,7 +32,7 @@ plugins=(
 )
 
 # User configuration
-export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,10 +49,19 @@ export LANG=en_US.UTF-8
 setopt nonomatch    # fix weird globbing output
 
 # Command Aliases
-alias l='ls -h --color'
+
+# exa->ls
+if type "exa" > /dev/null; then
+  alias l='exa --git'
+  alias ll='exa -lh --git'
+  alias sl='exa --git'
+else
+  alias l='ls -h --color'
+  alias ll='ls -lh --color'
+  alias sl='ls -h --color'
+fi
+
 alias ls='ls -h --color'
-alias ll='ls -lh --color'
-alias sl='ls -h --color'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias knssh='kontena node ssh -u root'
