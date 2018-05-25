@@ -23,6 +23,7 @@
     "editor.fontFamily": "'SFMono-Regular', Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.fontSize": 12,
+    "editor.renderIndentGuides": true,
     "window.zoomLevel": 0,
     "material-icon-theme.showUpdateMessage": false,
     "vsicons.dontShowNewVersionMessage": true,
@@ -70,4 +71,5 @@
     },
     "extensions.ignoreRecommendations": false,
     "gitlens.keymap": "alternate",
+    "gitlens.historyExplorer.enabled": true,
 }

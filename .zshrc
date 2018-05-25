@@ -17,7 +17,6 @@ plugins=(
           docker 
           docker-compose 
           zsh-syntax-highlighting 
-          zsh-autosuggestions
           tmux
           nvm
           pip
