@@ -35,12 +35,6 @@ export PATH="$PATH:/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:/usr/sbin:/us
 
 source $ZSH/oh-my-zsh.sh
 
-# zsh autosuggestion
-export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
-export ZSH_AUTOSUGGEST_USE_ASYNC=1
-bindkey '^ ' autosuggest-execute
-bindkey '^f' forward-word
-
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
