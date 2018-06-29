@@ -39,19 +39,14 @@ Bundle 'zacanger/angr.vim'
 Bundle 'dracula/vim'
 
 " codeutil
-Bundle 'leafgarland/typescript-vim'
+Bundle 'sheerun/vim-polyglot'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
-Bundle 'othree/html5.vim'
 
 Bundle 'scrooloose/nerdtree'
 nmap <leader>ne :NERDTree<cr>
 
 Bundle 'airblade/vim-gitgutter'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'lervag/vimtex'
-Bundle 'mxw/vim-jsx'
-Bundle 'pangloss/vim-javascript'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'neomake/neomake'
 " Run NeoMake on read and write operations
@@ -68,18 +63,12 @@ let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
 
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'stanangeloff/php.vim'
-Bundle 'kylef/apiblueprint.vim'
 Bundle 'moll/vim-node'
-Bundle 'posva/vim-vue'
 Bundle 'tpope/vim-rails'
-Bundle 'ekalinin/Dockerfile.vim'
 Bundle 'prettier/vim-prettier'
 Bundle 'tpope/vim-sleuth'
-Bundle 'chr4/nginx.vim'
 Bundle 'chr4/sslsecure.vim'
 
-Bundle 'elzr/vim-json'
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
 " Set dosini syntax highlighting for conf files

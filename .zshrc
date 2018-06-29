@@ -88,6 +88,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # GoLang vars
 export GOPATH=$HOME/.go
+export GOBIN=$GOPATH/bin
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
