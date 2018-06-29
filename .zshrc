@@ -46,7 +46,7 @@ setopt nonomatch    # fix weird globbing output
 # exa->ls
 if type "exa" > /dev/null; then
   alias l='exa --git'
-  alias ll='exa -lh --git'
+  alias ll='exa -lah --git'
   alias sl='exa --git'
 else
   alias l='ls -h --color'
