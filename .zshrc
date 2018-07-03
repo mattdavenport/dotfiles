@@ -43,17 +43,9 @@ setopt nonomatch    # fix weird globbing output
 
 # Command Aliases
 
-# exa->ls
-if type "exa" > /dev/null; then
-  alias l='exa --git'
-  alias ll='exa -lah --git'
-  alias sl='exa --git'
-else
-  alias l='ls -h --color'
-  alias ll='ls -lh --color'
-  alias sl='ls -h --color'
-fi
-
+alias l='ls -h --color'
+alias ll='ls -lh --color'
+alias sl='ls -h --color'
 alias ls='ls -h --color'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
