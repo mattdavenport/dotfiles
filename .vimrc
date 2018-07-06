@@ -15,7 +15,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'ctrlpvim/ctrlp.vim'
+
+Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
@@ -68,7 +69,6 @@ Bundle 'tpope/vim-rails'
 Bundle 'prettier/vim-prettier'
 Bundle 'tpope/vim-sleuth'
 Bundle 'chr4/sslsecure.vim'
-
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
 " Set dosini syntax highlighting for conf files
