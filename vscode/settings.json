@@ -32,7 +32,6 @@
     "workbench.statusBar.visible": true,
     "eslint.enable": true,
     "workbench.activityBar.visible": false,
-    "vim.disableAnnoyingNeovimMessage": true,
     "emmet.triggerExpansionOnTab": false,
     "emmet.showAbbreviationSuggestions": false,
     "emmet.excludeLanguages": [
@@ -75,4 +74,12 @@
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
     "shellcheck.disableVersionCheck": true,
+    "[python]": {
+        "editor.tabSize": 4
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.lintOnSave": true,
+    "files.autoSave": "afterDelay",
 }
