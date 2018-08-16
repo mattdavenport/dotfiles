@@ -39,6 +39,8 @@
         "markdown",
         "javascriptreact"
     ],
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -72,4 +74,5 @@
     "extensions.ignoreRecommendations": false,
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
+    "shellcheck.disableVersionCheck": true,
 }

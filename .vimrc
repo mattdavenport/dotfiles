@@ -42,6 +42,7 @@ Bundle 'dracula/vim'
 Bundle 'sheerun/vim-polyglot'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'vim-scripts/closetag.vim'
+let g:graphql_javascript_tags = []
 
 Bundle 'scrooloose/nerdtree'
 nmap <leader>ne :NERDTree<cr>
