@@ -79,10 +79,10 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # GoLang vars
-export GOPATH=$HOME/.go
+export GOPATH=$(go env GOPATH)
 export GOBIN=$GOPATH/bin
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # OSX
 export PATH=$PATH:/opt/local/bin
