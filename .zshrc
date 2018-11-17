@@ -43,10 +43,10 @@ setopt nonomatch    # fix weird globbing output
 
 # Command Aliases
 
-alias l='ls -h --color'
-alias ll='ls -lh --color'
-alias sl='ls -h --color'
-alias ls='ls -h --color'
+alias l='ls -hG'
+alias ll='ls -lhG'
+alias sl='ls -hG'
+alias ls='ls -hG'
 alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
 alias k='kontena'
 alias knssh='kontena node ssh -u root'

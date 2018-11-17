@@ -81,5 +81,6 @@
     "python.linting.flake8Enabled": true,
     "python.linting.pylintEnabled": false,
     "python.linting.lintOnSave": true,
+    "python.jediEnabled": false,
     "files.autoSave": "afterDelay",
 }
