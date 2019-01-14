@@ -20,9 +20,9 @@
         "terminal.background": "#2d303f"
     },
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "'SFMono-Regular', Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
+    "editor.fontFamily": "Monaco, Menlo, 'Input Mono', 'Courier New', monospace",
     "editor.minimap.enabled": false,
-    "editor.fontSize": 12,
+    "editor.fontSize": 14,
     "editor.renderIndentGuides": true,
     "window.zoomLevel": 0,
     "material-icon-theme.showUpdateMessage": false,
@@ -83,4 +83,7 @@
     "python.linting.lintOnSave": true,
     "python.jediEnabled": false,
     "files.autoSave": "afterDelay",
+    "editor.fontLigatures": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
 }
