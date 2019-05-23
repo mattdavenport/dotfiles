@@ -105,6 +105,11 @@ if [[ -f ~/.ssh/.auto-agent ]]; then
   fi
 fi
 
+# zlib Config
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
 # Helper functions/aliases
 alias whatsmyip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias nsps='netstat -plunt | sort'
