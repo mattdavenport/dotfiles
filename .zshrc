@@ -58,6 +58,8 @@ alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
 alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
 alias mysqlmonitor="$HOME/.dotfiles/utils/mysql_monitor.sh"
 alias ag='ag --color-match="3;31"'
+alias git-date-branches="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
+
 # Set editor
 if type "nvim" > /dev/null; then
   export EDITOR='nvim'
