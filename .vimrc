@@ -55,6 +55,8 @@ Bundle 'neomake/neomake'
 " ref: https://robots.thoughtbot.com/my-life-with-neovim
 autocmd! BufReadPost,BufWritePost * Neomake
 
+Bundle 'jparise/vim-graphql'
+
 " Disable inherited syntastic
 let g:syntastic_mode_map = {
   \ "mode": "passive",

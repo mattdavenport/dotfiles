@@ -20,11 +20,11 @@
         "terminal.background": "#2d303f"
     },
     "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
+    "editor.fontFamily": "Consolas, Menlo, Monaco, 'Input Mono', 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.fontSize": 14,
     "editor.renderIndentGuides": true,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "material-icon-theme.showUpdateMessage": false,
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "Dracula",
@@ -41,16 +41,9 @@
     "gitlens.currentLine.enabled": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.advanced.messages": {
-        "suppressCommitHasNoPreviousCommitWarning": false,
-        "suppressCommitNotFoundWarning": false,
-        "suppressFileNotUnderSourceControlWarning": false,
-        "suppressGitVersionWarning": false,
-        "suppressLineUncommittedWarning": false,
-        "suppressNoRepositoryWarning": false,
-        "suppressResultsExplorerNotice": false,
+        "suppressLineUncommittedWarning": true,
         "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": true,
-        "suppressWelcomeNotice": false
+        "suppressUpdateNotice": true
     },
     "workbench.startupEditor": "newUntitledFile",
     "ruby.locate": {
@@ -90,10 +83,16 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "workbench.editor.enablePreview": false,
+    "terminal.integrated.rendererType": "dom",
+    "vscode_vibrancy.theme": "Default Dark",
+    "vscode_vibrancy.type": "ultra-dark",
+    "vscode_vibrancy.opacity": 0.5,
+    "terminal.integrated.fontSize": 13,
 }
