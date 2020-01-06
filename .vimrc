@@ -31,12 +31,7 @@ let g:vimwiki_list = [{
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'markdown'}
 let g:vimwiki_dir_link = 'index'
 
-Bundle 'mattn/calendar-vim'
-
-" themes
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'sickill/vim-monokai'
-Bundle 'zacanger/angr.vim'
+" theme
 Bundle 'dracula/vim'
 
 " codeutil
