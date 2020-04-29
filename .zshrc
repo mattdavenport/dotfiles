@@ -123,6 +123,9 @@ function check-port {
   [[ -n $1 ]] && lsof -n -i4TCP:$1 | grep LISTEN || echo "Port $1 is available for use!"
 }
 
+# Bump up the history!
+export HISTSIZE=10000000
+
 # start Kontena vpn
 function kontena-vpn-start {
 	set -e
@@ -154,3 +157,5 @@ function readthenburn {
 source ~/.profile
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source /Users/matt/Library/Preferences/org.dystroy.broot/launcher/bash/br
