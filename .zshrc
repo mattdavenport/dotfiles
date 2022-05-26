@@ -9,6 +9,7 @@ plugins=(
           git
           rvm 
           bundler
+          kubectl
           heroku 
           rails 
           rake 
@@ -26,8 +27,6 @@ plugins=(
           python
           pyenv
           virtualenv
-          django
-          go
 )
 
 # User configuration
@@ -79,12 +78,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# GoLang vars
-export GOPATH=$(go env GOPATH)
-export GOBIN=$GOPATH/bin
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$(go env GOPATH)/bin
 
 # OSX
 export PATH=$PATH:/opt/local/bin
@@ -157,5 +150,6 @@ function readthenburn {
 source ~/.profile
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /Users/matt/Library/Preferences/org.dystroy.broot/launcher/bash/br
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
