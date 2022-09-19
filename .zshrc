@@ -14,7 +14,6 @@ plugins=(
           rails 
           rake 
           ruby 
-          vagrant 
           docker 
           docker-compose 
           zsh-syntax-highlighting 
