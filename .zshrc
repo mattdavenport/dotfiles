@@ -81,6 +81,10 @@ export NVM_DIR="$HOME/.nvm"
 # OSX
 export PATH=$PATH:/opt/local/bin
 
+# GPG
+export GPG_TTY=$(tty)
+export GPG_AGENT_INFO
+
 # Kontena settings
 export SSL_IGNORE_ERRORS=true
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
@@ -144,6 +148,9 @@ function readthenburn {
     url=$(curl -s -XPOST -F "secret=$secret" https://secure.bss-llc.com/readthenburn?action=$action)
     if [ $? -eq 0 -a $action = "write" ]; then echo "$url/raw"; else echo $url; fi
 }
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # source .profile for machine-specific settings
 source ~/.profile

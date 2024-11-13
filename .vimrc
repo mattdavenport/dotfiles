@@ -32,7 +32,7 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'markdown'}
 let g:vimwiki_dir_link = 'index'
 
 " theme
-Bundle 'dracula/vim'
+Bundle 'phanviet/vim-monokai-pro'
 
 " codeutil
 Bundle 'sheerun/vim-polyglot'
@@ -69,6 +69,9 @@ Bundle 'tpope/vim-sleuth'
 Bundle 'chr4/sslsecure.vim'
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
 
+" Disable visual bell
+set belloff=all
+
 " Set dosini syntax highlighting for conf files
 autocmd! BufRead,BufNewFile *.conf setf dosini
 
@@ -86,7 +89,7 @@ endif
 
 filetype plugin indent on   " detect file type and load indents and plugins
 syntax on                   " turn on syntax highlighting
-color dracula         " syntax highlighting colours
+color monokai_pro         " syntax highlighting colours
 
 set autoread                " auto reload buffer when file modified externally
 " clipboard setting causes errors on OSX
@@ -178,7 +181,6 @@ set guioptions=
 set guifont=Menlo:h14
 
 " Airline customizations
-let g:airline_theme='dracula'
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
