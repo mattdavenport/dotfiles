@@ -7,7 +7,6 @@ ZSH_THEME="$(cat $HOME/.zsh_theme)"
 # oh-my-zsh Plugins
 plugins=(
           git
-          rvm 
           bundler
           kubectl
           heroku 
@@ -15,17 +14,15 @@ plugins=(
           rake 
           ruby 
           docker 
-          docker-compose 
           zsh-syntax-highlighting 
           tmux
-          nvm
           pip
           npm
           node
           gulp
           python
-          pyenv
           virtualenv
+          ddev
 )
 
 # User configuration
@@ -70,13 +67,6 @@ alias vim="$EDITOR -p"
 
 # reenable venv prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=0
-
-# NVM settings
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # OSX
 export PATH=$PATH:/opt/local/bin
@@ -156,6 +146,15 @@ eval "$(direnv hook zsh)"
 source ~/.profile
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+eval "$(mise activate zsh)"
+
+source <(fzf --zsh)
+
+# bit
+case ":$PATH:" in
+  *":/Users/mattdavenport/bin:"*) ;;
+  *) export PATH="$PATH:/Users/mattdavenport/bin" ;;
+esac
+# bit end

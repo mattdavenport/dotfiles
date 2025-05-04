@@ -1,27 +1,26 @@
-" Automatically setup Vundle on first run
-if !isdirectory(expand("~/.vim/bundle/vundle"))
-    call system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
+" Automatically setup vim-plug on first run
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
+  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-set nocompatible
-filetype off
-filetype plugin on
-set rtp+=~/.vim/bundle/vundle
-set omnifunc=syntaxcomplete#Complete
-call vundle#rc()
+
+" Set up vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
 
 " vimutil
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'bling/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+Plug 'tanvirtin/monokai.nvim'
 
-Bundle 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'  " set working dir path when not specified
 
-Bundle 'vimwiki/vimwiki'
+Plug 'vimwiki/vimwiki'
 let g:vimwiki_list = [{
       \ 'path': '~/Dropbox/Wiki/', 
       \ 'path_html': '~/Dropbox/Wiki/html',
@@ -32,25 +31,26 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.wiki': 'markdown'}
 let g:vimwiki_dir_link = 'index'
 
 " theme
-Bundle 'phanviet/vim-monokai-pro'
+" Plug 'phanviet/vim-monokai-pro'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " codeutil
-Bundle 'sheerun/vim-polyglot'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'vim-scripts/closetag.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/vim-easy-align'
+Plug 'vim-scripts/closetag.vim'
 let g:graphql_javascript_tags = []
 
-Bundle 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 nmap <leader>ne :NERDTree<cr>
 
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-syntastic/syntastic'
-Bundle 'neomake/neomake'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-syntastic/syntastic'
+Plug 'neomake/neomake'
 " Run NeoMake on read and write operations
 " ref: https://robots.thoughtbot.com/my-life-with-neovim
 autocmd! BufReadPost,BufWritePost * Neomake
 
-Bundle 'jparise/vim-graphql'
+Plug 'jparise/vim-graphql'
 
 " Disable inherited syntastic
 let g:syntastic_mode_map = {
@@ -61,13 +61,29 @@ let g:syntastic_mode_map = {
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
 
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'moll/vim-node'
-Bundle 'tpope/vim-rails'
-Bundle 'prettier/vim-prettier'
-Bundle 'tpope/vim-sleuth'
-Bundle 'chr4/sslsecure.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'moll/vim-node'
+Plug 'tpope/vim-rails'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+Plug 'tpope/vim-sleuth'
+Plug 'chr4/sslsecure.vim'
 let g:vim_json_syntax_conceal = 0   " disable stupid JSON string quote hiding
+
+" Markdown stuff
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_new_list_item_indent = 2
+
+" End vim-plug
+call plug#end()
+
+filetype plugin indent on   " detect file type and load indents and plugins
+syntax on                   " turn on syntax highlighting
+"colorscheme monokai_pro     " syntax highlighting colours
+"colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme monokai
+
 
 " Disable visual bell
 set belloff=all
@@ -75,25 +91,9 @@ set belloff=all
 " Set dosini syntax highlighting for conf files
 autocmd! BufRead,BufNewFile *.conf setf dosini
 
-" Markdown stuff
-Plugin 'godlygeek/tabular'
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_new_list_item_indent = 2
-
-" Automatically install bundles on first run
-if !isdirectory(expand("~/.vim/bundle/vim-airline"))
-    execute 'silent BundleInstall'
-    execute 'silent q'
-endif
-
-
-filetype plugin indent on   " detect file type and load indents and plugins
-syntax on                   " turn on syntax highlighting
-color monokai_pro         " syntax highlighting colours
-
 set autoread                " auto reload buffer when file modified externally
 " clipboard setting causes errors on OSX
-"set clipboard=unnamed       " yank and paste using system clipboard
+set clipboard=       " yank and paste using system clipboard
 set encoding=utf-8          " default character encoding
 set hidden                  " do not unload buffers that get hidden
 set noswapfile              " do not use a swap file for buffers
@@ -132,7 +132,6 @@ noremap <C-n> :nohlsearch<CR>
 " nnoremap <S-Tab> <<
 inoremap <S-Tab> <C-d>
 
-
 let mapleader = ","
 let g:mapleader = ","
 let g:user_emmet_leader_key = '<C-e>'
@@ -169,8 +168,8 @@ map <Leader>a <Plug>(EasyAlign)
 map <Leader>n :NERDTreeToggle<CR>
 
 " Shortcuts to edit and reload vim config
-nnoremap <Leader>r :edit ~/.vim/vimrc<CR>
-nnoremap <Leader>R :source ~/.vim/vimrc<CR>:source ~/.vim/vimrc<CR>
+nnoremap <Leader>r :edit ~/.config/nvim/init.vim<CR>
+nnoremap <Leader>R :source ~/.config/nvim/init.vim<CR>
 
 " VIM-like tab navigation
 nnoremap th :tabprev<CR>
