@@ -19,15 +19,14 @@ plugins=(
           pip
           npm
           node
-          gulp
           python
-          virtualenv
           ddev
 )
 
 # User configuration
 export PATH="$PATH:/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
+# Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -49,10 +48,8 @@ alias ssh-keygen='ssh-keygen -b 4096'
 alias hs='head *'
 alias tree='tree -C'
 alias setup_docker_network='ifconfig lo0 alias 10.254.254.254'
-alias docker-rmi-dangling='docker rmi $(docker images -f "dangling=true" -q)'
-alias docker-rmv-dangling='docker volume rm $(docker volume ls -qf dangling=true)'
 alias mysqlmonitor="$HOME/.dotfiles/utils/mysql_monitor.sh"
-alias ag='ag --color-match="3;31"'
+alias ag='rg'
 alias git-date-branches="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
 
 # Set editor
@@ -64,9 +61,6 @@ fi
 
 alias vi="$EDITOR -p"
 alias vim="$EDITOR -p"
-
-# reenable venv prompt
-export VIRTUAL_ENV_DISABLE_PROMPT=0
 
 # OSX
 export PATH=$PATH:/opt/local/bin
@@ -112,30 +106,11 @@ function check-port {
 # Bump up the history!
 export HISTSIZE=10000000
 
-# start Kontena vpn
-function kontena-vpn-start {
-	set -e
-	local pidfile=/var/run/kontena-openvpn.pid
-	if [[ -s $pidfile ]] && [[ -f /proc/$(cat $pidfile)/stat ]]; then
-      echo -n "Killing old openVPN process... "
-      sudo kill -TERM $(cat $pidfile)
-      while [[ -f /proc/$(cat $pidfile)/stat ]]; do sleep 1; done
-      echo "Done"
-	fi
-    local tmpfile=$(mktemp -t openvpn.XXXXX)
-    echo -n "Loading VPN config... "
-    kontena vpn config "$@" > $tmpfile
-    echo -n "Starting OpenVPN connection to $(awk '/^remote /{print $2}' $tmpfile)... "
-    sudo openvpn --daemon --writepid $pidfile --config $tmpfile
-    echo "Done"
-    (sleep 5; rm $tmpfile; rm -f /tmp/openvpn.*)&
-}
-
 # send file to rtb
 function readthenburn {
 	[ -n "$1" ] || { echo "Usage: pass filename to upload file or use - to read stdin"; return 1; }
 	[ "$1" = '-' ] && { secret='<-'; action=write; } || { secret="@$1"; action=upload; }
-    url=$(curl -s -XPOST -F "secret=$secret" https://secure.bss-llc.com/readthenburn?action=$action)
+    url=$(curl -s -XPOST -F "secret=$secret" https://readthenburn.arbolt.com/readthenburn?action=$action)
     if [ $? -eq 0 -a $action = "write" ]; then echo "$url/raw"; else echo $url; fi
 }
 
@@ -152,9 +127,18 @@ eval "$(mise activate zsh)"
 
 source <(fzf --zsh)
 
+export PAGER=less
+
 # bit
 case ":$PATH:" in
   *":/Users/mattdavenport/bin:"*) ;;
   *) export PATH="$PATH:/Users/mattdavenport/bin" ;;
 esac
 # bit end
+
+# Nix profile
+if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then
+  . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+fi
+
+alias claude="/Users/mattdavenport/.claude/local/claude"

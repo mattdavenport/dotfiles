@@ -179,6 +179,16 @@ nnoremap tn :tabnew<CR>
 set guioptions=
 set guifont=Menlo:h14
 
+" Start with relative numbers
+set relativenumber
+
+" Switch to absolute in Insert mode, and back to relative otherwise
+augroup NumberToggle
+  autocmd!
+  autocmd InsertEnter * set norelativenumber
+  autocmd InsertLeave * set relativenumber
+augroup END
+
 " Airline customizations
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
